@@ -1,0 +1,109 @@
+/* -------------------------------------------------------------------------- */
+/*                               Monopoly cards                               */
+/* -------------------------------------------------------------------------- */
+
+.mpl-card {
+	width: 300px;
+	background-color: #fff;
+	padding: 1rem;
+	font-family: "Roboto Slab";
+	box-shadow: -0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+	border-radius: 0.5rem;
+	transition: all 0.3s ease-in-out;
+    color: #222;
+	/* transform: perspective(1000px) rotateX(35deg) rotateY(4deg) rotateZ(-30deg) scale(0.7); */
+    /* transform: skew(0deg, -5deg) scale(0.8); */
+}
+.mpl-wrapper {
+	border: 1px solid #000;
+	padding: 1rem;
+}
+.mpl-card-header {
+	text-align: center;
+	border: 2px solid #000;
+	padding: 1rem;
+	font-size: 1rem;
+    margin-bottom: 1rem;
+}
+.mpl-img {
+	width: 150px;
+}
+.mpl-card-body {
+	text-align: center;
+	white-space: nowrap;
+	font-size: 1rem;
+}
+.mpl-card-body table {
+	margin: 0.5rem auto;
+	text-align: right;
+    color: #777;
+}
+.mpl-card-body td {
+	padding: 0 0.5rem;
+}
+.mpl-card-body td:nth-child(even) {
+	font-weight: bold;
+	white-space: none;
+	text-align: left;
+    color: #222;
+}
+.mpl-card-footer {
+	text-align: center;
+}
+.mpl-card-footer button {
+	background: #c8c2bc;
+	font-family: inherit;
+	padding: 0.6em 1.3em;
+	font-weight: 900;
+	font-size: 18px;
+	border: 1px solid #000;
+	box-shadow: -0.1em 0.1em;
+}
+
+.mpl-card-footer button:hover {
+	transform: translate(0.05em, -0.05em);
+	box-shadow: -0.15em 0.15em;
+	background: #ffd384;
+}
+
+.mpl-card-footer button:active {
+	transform: translate(-0.05em, 0.05em);
+	box-shadow: -0.05em 0.05em;
+}
+
+/* Colors */
+.mpl-red .mpl-card-header {
+	background-color: #f3c5c5;
+}
+.mpl-yellow .mpl-card-header {
+	background-color: #f3e5c5;
+}
+.mpl-green .mpl-card-header {
+	background-color: #b4cfb0;
+}
+.mpl-blue .mpl-card-header {
+	background-color: #c5c5f3;
+}
+.mpl-purple .mpl-card-header {
+	background-color: #c5f3f3;
+}
+.mpl-brown .mpl-card-header {
+	background-color: #c0a080;
+}
+.mpl-orange .mpl-card-header {
+	background-color: #ffc898;
+}
+/* 'mpl-red', 'mpl-yellow', 'mpl-green', 'mpl-blue', 'mpl-purple', 'mpl-orange', 'mpl-brown' */
+
+/* Tablet and iPad ---------------- */
+@media only screen and (min-width: 425px) and (max-width: 768px) {
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 769px) {
+	.mpl-card:hover {
+		transition: all 0.3s ease-in-out;
+		transform: translate(-1rem, -0.5em);
+        z-index: 1;
+	}
+}

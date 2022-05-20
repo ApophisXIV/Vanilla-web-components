@@ -1,0 +1,172 @@
+/* Adopted design criteria: Mobile first / Desktop first */
+.mod2-card {
+	--mod2-card-t1: #444cf7;
+	--mod2-card-t2: #0ac7ba;
+	--mod2-card-t3: #dbff3d;
+	--mod2-card-t4: #ff7a5a;
+    --mod2-font-family: 'Roboto', sans-serif;
+}
+
+.mod2-card-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	grid-gap: 2rem;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.mod2-card {
+    font-family: var(--mod2-font-family);
+	background: #333;
+	border-radius: 0.5rem;
+	padding: 2rem 1rem;
+	color: #aaa;
+	box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2), 0 0 1rem rgba(0, 0, 0, 0.2);
+	background-color: #374045;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url("data:image/svg+xml;utf8, %3Csvg width=%22100%25%22 height=%22100%25%22 viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22 %3E %3Cdefs%3E %3CclipPath id=%22shape%22%3E %3Cpath fill=%22currentColor%22 d=%22M799%2C642Q784%2C784%2C642%2C875.5Q500%2C967%2C356%2C877.5Q212%2C788%2C148.5%2C644Q85%2C500%2C185%2C392.5Q285%2C285%2C392.5%2C264Q500%2C243%2C659%2C212.5Q818%2C182%2C816%2C341Q814%2C500%2C799%2C642Z%22%3E%3C%2Fpath%3E %3C%2FclipPath%3E %3C%2Fdefs%3E %3Cg clip-path=%22url(%23shape)%22%3E %3Cpath fill=%22%23f7f7f7%22 d=%22M799%2C642Q784%2C784%2C642%2C875.5Q500%2C967%2C356%2C877.5Q212%2C788%2C148.5%2C644Q85%2C500%2C185%2C392.5Q285%2C285%2C392.5%2C264Q500%2C243%2C659%2C212.5Q818%2C182%2C816%2C341Q814%2C500%2C799%2C642Z%22 %2F%3E %3C%2Fg%3E %3C%2Fsvg%3E");
+	transition: all 0.3s ease-in-out;
+	position: relative;
+	overflow: hidden;
+    width: 250px;
+}
+.mod2-card:hover {
+	background-color: #f5f5f5;
+	transform: scale(1.05) skew(1deg, -1deg);
+}
+.mod2-card:hover .mod2-card-image {
+	filter: grayscale(100%);
+}
+.mod2-card-image {
+	height: 150px;
+	width: 150px;
+	margin: 0 auto;
+	background: #333;
+	border-radius: 50%;
+	border: 4px solid #ccc;
+	box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2), 0 0 1rem rgba(0, 0, 0, 0.2);
+	position: relative;
+	overflow: hidden;
+}
+
+.mod2-card-image img {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.mod2-card-title {
+	font-size: 1.5rem;
+	color: #fff;
+}
+.mod2-card-title p {
+	color: #aaa;
+	font-size: 1rem;
+}
+.mod2-card-body {
+	opacity: 0;
+	animation: fade-in 0.8s forwards;
+	text-align: center;
+	margin-top: 1rem;
+
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+		rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+	padding: 1rem;
+	font-size: 0.9em;
+	background-color: #252525dd;
+	border-radius: 0.5rem;
+}
+
+.mod2-card-body button {
+	width: 100px;
+	height: 50px;
+	border-radius: 2rem;
+	font-size: 1.25rem;
+	margin-top: 1rem;
+	background-color: #f5f5f5;
+	border: 1px solid #ccc;
+	color: #252525dd;
+	outline: none;
+	transition: 0.3s;
+	cursor: pointer;
+}
+.mod2-card-body button:hover {
+	background-color: #252525d2;
+	color: #f5f5f5;
+	transform: scale(1.1);
+}
+
+.mod2-card-body table {
+	margin: 0.5rem auto;
+	text-align: left;
+}
+.mod2-card-body td {
+	text-align: right;
+}
+.mod2-card-body td:nth-child(even) {
+	font-weight: bold;
+	white-space: none;
+	padding-left: 1rem;
+	display: inline-block;
+}
+
+/* Animations --------------------- */
+@keyframes fade-in {
+	0% {
+		transform: translateY(-1rem);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+/* Themes ------------------------- */
+.mod2-card-t1 {
+	background-image: url("data:image/svg+xml;utf8, %3Csvg width=%22100%25%22 height=%22100%25%22 viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22 %3E %3Cdefs%3E %3CclipPath id=%22shape%22%3E %3Cpath fill=%22currentColor%22 d=%22M799%2C642Q784%2C784%2C642%2C875.5Q500%2C967%2C356%2C877.5Q212%2C788%2C148.5%2C644Q85%2C500%2C185%2C392.5Q285%2C285%2C392.5%2C264Q500%2C243%2C659%2C212.5Q818%2C182%2C816%2C341Q814%2C500%2C799%2C642Z%22%3E%3C%2Fpath%3E %3C%2FclipPath%3E %3C%2Fdefs%3E %3Cg clip-path=%22url(%23shape)%22%3E %3Cpath fill=%22%23444cf7%22 d=%22M799%2C642Q784%2C784%2C642%2C875.5Q500%2C967%2C356%2C877.5Q212%2C788%2C148.5%2C644Q85%2C500%2C185%2C392.5Q285%2C285%2C392.5%2C264Q500%2C243%2C659%2C212.5Q818%2C182%2C816%2C341Q814%2C500%2C799%2C642Z%22 %2F%3E %3C%2Fg%3E %3C%2Fsvg%3E");
+}
+.mod2-card-t1 button {
+	background-color: var(--mod2-card-t1);
+	border: 1px solid var(--mod2-card-t1);
+}
+.mod2-card-t1 button:hover {
+	color: var(--mod2-card-t1);
+}
+
+.mod2-card-t2 {
+	background-image: url("data:image/svg+xml;utf8, %3Csvg width=%22100%25%22 height=%22100%25%22 viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22 %3E %3Cdefs%3E %3CclipPath id=%22shape%22%3E %3Cpath fill=%22currentColor%22 d=%22M799%2C642Q784%2C784%2C642%2C875.5Q500%2C967%2C356%2C877.5Q212%2C788%2C148.5%2C644Q85%2C500%2C185%2C392.5Q285%2C285%2C392.5%2C264Q500%2C243%2C659%2C212.5Q818%2C182%2C816%2C341Q814%2C500%2C799%2C642Z%22%3E%3C%2Fpath%3E %3C%2FclipPath%3E %3C%2Fdefs%3E %3Cg clip-path=%22url(%23shape)%22%3E %3Cpath fill=%22%230ac7ba%22 d=%22M799%2C642Q784%2C784%2C642%2C875.5Q500%2C967%2C356%2C877.5Q212%2C788%2C148.5%2C644Q85%2C500%2C185%2C392.5Q285%2C285%2C392.5%2C264Q500%2C243%2C659%2C212.5Q818%2C182%2C816%2C341Q814%2C500%2C799%2C642Z%22 %2F%3E %3C%2Fg%3E %3C%2Fsvg%3E");
+}
+.mod2-card-t2 button {
+	background-color: var(--mod2-card-t2);
+	border: 1px solid var(--mod2-card-t2);
+}
+.mod2-card-t2 button:hover {
+	color: var(--mod2-card-t2);
+}
+
+.mod2-card-t3 {
+	background-image: url("data:image/svg+xml;utf8, %3Csvg width=%22100%25%22 height=%22100%25%22 viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22 %3E %3Cdefs%3E %3CclipPath id=%22shape%22%3E %3Cpath fill=%22currentColor%22 d=%22M799%2C642Q784%2C784%2C642%2C875.5Q500%2C967%2C356%2C877.5Q212%2C788%2C148.5%2C644Q85%2C500%2C185%2C392.5Q285%2C285%2C392.5%2C264Q500%2C243%2C659%2C212.5Q818%2C182%2C816%2C341Q814%2C500%2C799%2C642Z%22%3E%3C%2Fpath%3E %3C%2FclipPath%3E %3C%2Fdefs%3E %3Cg clip-path=%22url(%23shape)%22%3E %3Cpath fill=%22%23DBFF3D%22 d=%22M799%2C642Q784%2C784%2C642%2C875.5Q500%2C967%2C356%2C877.5Q212%2C788%2C148.5%2C644Q85%2C500%2C185%2C392.5Q285%2C285%2C392.5%2C264Q500%2C243%2C659%2C212.5Q818%2C182%2C816%2C341Q814%2C500%2C799%2C642Z%22 %2F%3E %3C%2Fg%3E %3C%2Fsvg%3E");
+}
+.mod2-card-t3 button {
+	background-color: var(--mod2-card-t3);
+	border: 1px solid var(--mod2-card-t3);
+}
+.mod2-card-t3 button:hover {
+	color: var(--mod2-card-t3);
+}
+
+.mod2-card-t4 {
+	background-image: url("data:image/svg+xml;utf8, %3Csvg width=%22100%25%22 height=%22100%25%22 viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22 %3E %3Cdefs%3E %3CclipPath id=%22shape%22%3E %3Cpath fill=%22currentColor%22 d=%22M799%2C642Q784%2C784%2C642%2C875.5Q500%2C967%2C356%2C877.5Q212%2C788%2C148.5%2C644Q85%2C500%2C185%2C392.5Q285%2C285%2C392.5%2C264Q500%2C243%2C659%2C212.5Q818%2C182%2C816%2C341Q814%2C500%2C799%2C642Z%22%3E%3C%2Fpath%3E %3C%2FclipPath%3E %3C%2Fdefs%3E %3Cg clip-path=%22url(%23shape)%22%3E %3Cpath fill=%22%23FF7A5A%22 d=%22M799%2C642Q784%2C784%2C642%2C875.5Q500%2C967%2C356%2C877.5Q212%2C788%2C148.5%2C644Q85%2C500%2C185%2C392.5Q285%2C285%2C392.5%2C264Q500%2C243%2C659%2C212.5Q818%2C182%2C816%2C341Q814%2C500%2C799%2C642Z%22 %2F%3E %3C%2Fg%3E %3C%2Fsvg%3E");
+}
+.mod2-card-t4 button {
+	background-color: var(--mod2-card-t4);
+	border: 1px solid var(--mod2-card-t4);
+}
+.mod2-card-t4 button:hover {
+	color: var(--mod2-card-t4);
+}

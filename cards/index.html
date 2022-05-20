@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cards</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			html,
+			body {
+				background: #222;
+				text-align: center;
+			}
+			h1 {
+				color: #fff;
+				font-size: 4rem;
+				font-family: "Roboto", sans-serif;
+				padding: 2rem 0;
+			}
+			section {
+				max-width: 1350px;
+				margin: 0 auto;
+				padding: 2rem;
+				background: #111;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: center;
+				gap: 20px;
+			}
+		</style>
+
+		<link rel="stylesheet" href="card_1.css" />
+		<link rel="stylesheet" href="card_2.css" />
+		<link rel="stylesheet" href="card_3.css" />
+		<link rel="stylesheet" href="card_4.css" />
+		<link rel="stylesheet" href="card_5.css" />
+	</head>
+	<body>
+		<h1>Monopoly style</h1>
+		<section></section>
+
+		<h1>Futuristic style</h1>
+		<section></section>
+		<section></section>
+
+		<h1>Modern style</h1>
+		<section></section>
+		<section></section>
+
+		<script>
+			const mpl_cards_themes = ["mpl-red", "mpl-yellow", "mpl-green", "mpl-blue", "mpl-purple", "mpl-orange", "mpl-brown"];
+			const mpl_card_template = (theme) => `
+                <div class="mpl-card ${theme}">
+                    <div class="mpl-wrapper">
+                        <div class="mpl-card-header">
+                            <h3 class="mpl-card-title">Title</h3>
+                            Short description
+                        </div>
+                        <div class="mpl-card-body">
+                            <img class="mpl-img" src="saocom-1a.png" alt="" />
+                            <table>
+                                <tr>
+                                    <td>
+                                        <strong>Type:</strong>
+                                    </td>
+                                    <td>
+                                        <span>SAOCOM-1A</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Manufacturer:</strong>
+                                    </td>
+                                    <td>
+                                        <span>SAOCOM</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Country:</strong>
+                                    </td>
+                                    <td>
+                                        <span>China</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Year:</strong>
+                                    </td>
+                                    <td>
+                                        <span>1961</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="mpl-card-footer">
+                            <button>Button</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+			for (let i = 0; i < mpl_cards_themes.length; i++) document.querySelectorAll("section")[0].innerHTML += mpl_card_template(mpl_cards_themes[i]);
+		</script>
+		<script>
+			const ft1_cards_themes = ["ft1-card-tier-1", "ft1-card-tier-2", "ft1-card-tier-3", "ft1-card-tier-4"];
+			const ft1_card_template = (theme) => `
+                <div class="ft1-card">
+                    <div class="ft1-card-header">
+                        <img class="ft1-card-img" src="saocom-1a.png" alt="" />
+                    </div>
+                    <div class="ft1-card-body">
+                        <h3 class="ft1-card-title">SAOCOM-1A</h3>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </div>
+                    <button class="ft1-card-footer ${theme}">Ver más</button>
+                </div>
+            `;
+
+			const ft2_card_template = (theme) => `
+                <div class="ft2-card">
+                    <div class="ft2-card-header">
+                        <img class="ft2-card-img" src="saocom-1a.png" alt="SAOCOM-1A" />
+                    </div>
+                    <div class="ft2-card-body">
+                        <h3 class="ft2-card-title">SAOCOM-1A</h3>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </div>
+                    <button class="ft2-card-footer ${theme}">Ver más</button>
+                </div>
+            `;
+
+			for (let i = 0; i < ft1_cards_themes.length; i++) document.querySelectorAll("section")[1].innerHTML += ft1_card_template(ft1_cards_themes[i]);
+			for (let i = 0; i < ft1_cards_themes.length; i++) document.querySelectorAll("section")[2].innerHTML += ft2_card_template(ft1_cards_themes[i]);
+		</script>
+		<script>
+			const mod1_cards_themes = ["mod1-card-t1", "mod1-card-t2", "mod1-card-t3", "mod1-card-t4"];
+			const mod1_card_template = (theme) => `
+                <div class="mod1-card ${theme}">
+                    <div class="mod1-card-image">
+                        <img src="Cohete_Tronador_II.jpeg" alt="" />
+                    </div>
+                    <div class="mod1-card-body">
+                        <div class="mod1-card-body-wrapper">
+                            <div class="mod1-card-title">
+                                <h3>VEX-5B</h3>
+                                <p>Lanzadera en desarrollo</p>
+                            </div>
+                            <button type="button">
+                                |->O<-|
+                                <!-- <i class="fa-solid fa-eye"></i> -->
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+			const mod2_cards_themes = ["mod2-card-t1", "mod2-card-t2", "mod2-card-t3", "mod2-card-t4"];
+			const mod2_card_template = (theme) => `
+                <div class="mod2-card ${theme}">
+                    <div class="mod2-card-image">
+                        <img src="sac-b.jpg" alt="" />
+                    </div>
+                    <div class="mod2-card-body">
+                        <div class="mod2-card-body-wrapper">
+                            <div class="mod2-card-title">
+                                <h3>SAC-B</h3>
+                                <p>Satélite de investigación</p>
+                            </div>
+                            <button type="button">
+                                |->O<-|
+                                <!-- <i class="fa-solid fa-eye"></i> -->
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+			for (let i = 0; i < mod1_cards_themes.length; i++)
+				document.querySelectorAll("section")[3].innerHTML += mod1_card_template(mod1_cards_themes[i]);
+			for (let i = 0; i < mod2_cards_themes.length; i++)
+				document.querySelectorAll("section")[4].innerHTML += mod2_card_template(mod2_cards_themes[i]);
+		</script>
+	</body>
+</html>
